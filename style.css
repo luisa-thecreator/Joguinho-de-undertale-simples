@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sans2 {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 5px 0;
+  position: relative;
+}
+
+.sans2 video {
+  max-width: 90vw;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.sans2-image {
+  max-width: 90vw;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.buttonsave .savea .save .save2 {
+  width: 300px;
+  height: 170px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.buttonsave .savea .save .save2:hover {
+  transform: scale(1.1);
+}
+
+.buttonsave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.save {
+  border: none;
+}

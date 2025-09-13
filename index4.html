@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale - Integrity</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+
+    <div class="gameoverImage">
+        <img src="./imagens/gameover.gif" class="gameover-img" id="gameoverImage" alt="gameover">
+    </div>
+
+    <div class="gameover">
+        <audio id="gameoverAudio" autoplay preload="auto">
+            <source src="./imagens/audio game over.mp3" type="audio/mp3">
+        </audio>
+        <video id="gameoverVideo" autoplay preload="auto" muted>
+            <source src="./imagens/game over asgore ofc.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="buttonsave" id="buttonSave" style="opacity: 0;">
+        <a class="savea" href="indexmenu.html"><button class="save" id="save"><img class="save2"
+                    src="./imagens/botao_return-removebg-preview.png"
+                    alt="botão para iniciar o jogo, com o sans de fundo"></button></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('gameoverAudio');
+            const video = document.getElementById('gameoverVideo');
+
+            // Mostrar o vídeo
+            video.style.display = 'block';
+
+            // Configurar vídeo
+            video.muted = true; // Vídeo sem som para evitar conflito
+            video.volume = 0;
+
+            // Função para tocar áudio
+            function playAudio() {
+                audio.volume = 1.0;
+                audio.play().catch(error => {
+                    console.log('Erro ao tocar áudio:', error);
+                    // Tentar novamente após interação do usuário
+                    document.addEventListener('click', function () {
+                        audio.play().catch(e => console.log('Segunda tentativa falhou:', e));
+                    }, { once: true });
+                });
+            }
+
+            // Função para tocar vídeo
+            function playVideo() {
+                video.play().catch(error => {
+                    console.log('Erro ao tocar vídeo:', error);
+                });
+            }
+
+            // Tocar áudio imediatamente
+            playAudio();
+
+            // Tocar vídeo após um pequeno delay
+            setTimeout(() => {
+                playVideo();
+            }, 200);
+
+            // Mostrar botão de save quando o vídeo terminar
+            video.addEventListener('ended', function () {
+                const buttonSave = document.getElementById('buttonSave');
+
+                // Configurar transição de opacidade
+                buttonSave.style.transition = 'opacity 2s ease-in-out';
+                buttonSave.style.transform = 'translate(-50%, -50%)';
+
+                // Mostrar botão com fade in
+                setTimeout(() => {
+                    buttonSave.style.opacity = '1';
+                }, 800); // Delay de 0.8s após o vídeo terminar
+            });
+        });
+    </script>
+
+</body>
+
+</html>

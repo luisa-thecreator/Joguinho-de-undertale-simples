@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.game-board {
+  width: 80%;
+  height: 500px;
+  border: 8px solid #ffffff;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.osso {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  animation: osso-animation 1.5s infinite linear;
+}
+
+.alma {
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 600ms ease-out;
+}
+
+@keyframes osso-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  15% {
+    bottom: 150px;
+  }
+
+  30% {
+    bottom: 200px;
+  }
+
+  50% {
+    bottom: 200px;
+  }
+
+  70% {
+    bottom: 200px;
+  }
+
+  85% {
+    bottom: 150px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}

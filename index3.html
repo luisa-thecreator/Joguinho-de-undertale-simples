@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale - Integrity</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="heartBrokenImage">
+
+        <img src="./imagens/output-onlinegiftools.gif" class="heartBroken-img" id="heartBrokenImage" alt="heart broken"
+            onload="this.style.display='block'">
+
+    </div>
+
+    <div class="heartBroken">
+        <audio id="heartBroken" autoplay>
+            <source src="./imagens/heart broken.mp4" type="audio/mp4">
+        </audio>
+
+    </div>
+
+    <script>
+        // Garantir que o GIF seja mostrado apenas uma vez
+        document.addEventListener('DOMContentLoaded', function () {
+            const gif = document.getElementById('heartBrokenImage');
+
+            // Mostrar o GIF quando carregar
+            gif.style.display = 'block';
+
+            // Após 2 segundos, esconder o GIF rapidamente
+            setTimeout(() => {
+                gif.style.transition = 'opacity 0.2s ease-out';
+                gif.style.opacity = '0';
+
+                // Após o fade out rápido, esconder completamente e redirecionar para index4
+                setTimeout(() => {
+                    gif.style.display = 'none';
+
+                    // Redirecionar para index4 após um pequeno delay
+                    setTimeout(() => {
+                        window.location.href = 'index4.html';
+                    }, 100);
+                }, 200);
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>

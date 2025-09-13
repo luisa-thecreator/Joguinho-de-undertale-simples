@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.gameoverImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  padding-top: 0;
+}
+
+.gameover-img {
+  max-width: 70%;
+  max-height: 200vh;
+  object-fit: contain;
+  opacity: 0;
+  animation: fadeInGif 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInGif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gameover video {
+  display: block;
+  margin: -75px auto 0 auto;
+  max-width: 95%;
+  max-height: 55vh;
+  object-fit: contain;
+  border-radius: 10px;
+  position: relative;
+}
+.buttonsave .savea .save .save2 {
+  width: 500px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.buttonsave .savea .save .save2:hover {
+  transform: scale(1.05);
+}
+
+.buttonsave {
+  position: absolute;
+  top: 75%;
+  left: 47.7%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.save {
+  border: none;
+}
