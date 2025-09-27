@@ -23,7 +23,7 @@ JavaScript: Lógica do jogo (movimentos, colisões, derrota)
 
 2. Abra o arquivo `indexmenu.html` no seu navegador para jogar!
 
-## 💡 Funcionalidades
+## Funcionalidades
 
 * Movimentação do personagem usando a tecla 'space/espaço' do teclado.
 * Colisões com inimigos.
@@ -33,6 +33,6 @@ JavaScript: Lógica do jogo (movimentos, colisões, derrota)
 
 O jogo ainda será adaptado para celulares, tablets e outros aparelhos móveis.
 
-## 📝 Licença
+## Licença
 
 Este projeto está licenciado sob a Licença MIT – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
